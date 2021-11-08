@@ -35,12 +35,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Move();
+        Movement();
         Look();
     }
 
     // Script to move the player character depending on the input from the player.
-    private void Move()
+    private void Movement()
     {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask);
 
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             var lookPos = hit.transform.position - transform.position;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 0.1f);
         }
     }
 }
