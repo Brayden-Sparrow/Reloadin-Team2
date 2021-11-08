@@ -1,0 +1,56 @@
+# Blender MTL File: 'Vlie.blend'
+# Material Count: 5
+
+newmtl Material_49.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd F:\\GITHUB\\Assessment\\Reloadin-Team2\\Blender Assets\\textures\\5.png
+map_Ks F:\\GITHUB\\Assessment\\Reloadin-Team2\\Blender Assets\\textures\\7.png
+map_d F:\\GITHUB\\Assessment\\Reloadin-Team2\\Blender Assets\\textures\\5.png
+
+newmtl Material_57.002
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.498039 0.498039 0.498039
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material_57.006
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.498039 0.498039 0.498039
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material_90.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd F:\\GITHUB\\Assessment\\Reloadin-Team2\\Blender Assets\\textures\\936.png
+map_Ks F:\\GITHUB\\Assessment\\Reloadin-Team2\\Blender Assets\\textures\\940.png
+map_d F:\\GITHUB\\Assessment\\Reloadin-Team2\\Blender Assets\\textures\\936.png
+
+newmtl None
+Ns 500
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
