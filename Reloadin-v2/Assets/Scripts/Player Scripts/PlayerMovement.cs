@@ -7,12 +7,10 @@ public class PlayerMovement : MonoBehaviour
     // Variables
 
     [Header("Magnitude")]
-    [SerializeField] private float movementSpeed = 5f;
-    [SerializeField] private float walkSpeed;
+    [SerializeField] private float walkSpeed = 5f;
 
     [Header("Direction")]
     private Vector3 moveDirection;
-
     private Vector3 velocity;
 
     [SerializeField] private float jumpHeight = 2;
@@ -59,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        walkSpeed = movementSpeed * Time.deltaTime;
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
         moveDirection = new Vector3(moveX, 0, moveZ);
@@ -69,10 +66,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
-
-        //characterController.Move(moveDirection * Time.deltaTime);
+        
+        characterController.Move(moveDirection * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
-        //characterController.Move(velocity * Time.deltaTime);
+        characterController.Move(velocity * Time.deltaTime);
     }
 
     private void Jump()
