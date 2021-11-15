@@ -11,24 +11,24 @@ public class PlayerProjectile : MonoBehaviour
     private float chainNumber = 1f;
 
     // References
-
+    public GameObject firingPoint;
 
     // Functions
 
-    void Start()
+    void Awake()
     {
-        Destroy(gameObject, maxLifeTime);
+        Destroy(gameObject, maxLifeTime);       
     }
 
-    
+
     void Update()
     {
-        Vector3 movement = (transform.forward * shotSpeed * Time.deltaTime);
+        
     }
 
     private void LockChain()
     {
-        // Activate the line drawing element on the enemy object
+        // Activate the line drawing element on the enemy object.
 
     }
 
@@ -42,5 +42,10 @@ public class PlayerProjectile : MonoBehaviour
         {
             return;
         }
+    }
+
+    private void BulletMove()
+    {
+
     }
 }

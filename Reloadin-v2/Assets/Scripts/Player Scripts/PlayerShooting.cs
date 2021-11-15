@@ -12,11 +12,12 @@ public class PlayerShooting : MonoBehaviour
     private float currentAmmo;
     private bool Reloading;
     private float reloadDelay;
+    public float launchForce = 10f;
 
     // References
 
     private ParticleSystem Chain;
-    public GameObject Projectile;
+    public Rigidbody Projectile;
     public GameObject firePoint;
     private Ray chainDirection;
 
@@ -59,7 +60,9 @@ public class PlayerShooting : MonoBehaviour
         {
             if (currentAmmo > 0)
             {
-                Instantiate(Projectile, firePoint.transform.position, firePoint.transform.rotation);
+                Rigidbody projInstance = Instantiate(Projectile, firePoint.transform.position, firePoint.transform.rotation) as Rigidbody;
+                projInstance.velocity = launchForce * firePoint.transform.forward;
+
                 currentAmmo--;
             }
             else
