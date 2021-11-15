@@ -17,7 +17,7 @@ public class PlayerProjectile : MonoBehaviour
 
     void Start()
     {
-        
+        Destroy(gameObject, maxLifeTime);
     }
 
     
@@ -28,6 +28,7 @@ public class PlayerProjectile : MonoBehaviour
 
     private void LockChain()
     {
+        // Activate the line drawing element on the enemy object
 
     }
 
