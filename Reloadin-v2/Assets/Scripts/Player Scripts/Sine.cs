@@ -52,6 +52,10 @@ public class Sine : MonoBehaviour
     private float starting_z_rotation;
 
     private Renderer renderer;
+    
+
+
+    
     // Interal variables
 
     // Start is called before the first frame update
@@ -70,11 +74,15 @@ public class Sine : MonoBehaviour
         
 
         renderer = gameObject.GetComponent<Renderer>();
+        Debug.Log("start");
     }
+
 
     // Update is called once per frame
     void Update()
     {
+
+
         if (is_enabled)
         {
             switch (Wave)
