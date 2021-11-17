@@ -9,15 +9,15 @@ public class PlayerProjectile : MonoBehaviour
     private float shotSpeed = 10f;
     private float maxLifeTime = 4f;
     private float chainNumber = 1f;
+    private Vector3 currentPosition;
 
     // References
-    public GameObject firingPoint;
 
     // Functions
 
     void Awake()
     {
-        Destroy(gameObject, maxLifeTime);       
+        Destroy(gameObject, maxLifeTime);
     }
 
 
@@ -38,6 +38,7 @@ public class PlayerProjectile : MonoBehaviour
         {
             LockChain();
         }
+
         else
         {
             return;
