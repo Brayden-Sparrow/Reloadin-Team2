@@ -32,7 +32,9 @@ public class PlayerProjectile : MonoBehaviour
         if (other.tag == "Enemy")
         {
             LockChain();
+            Debug.Log(other.gameObject);
             //doomedEnemy[i] = other.gameObject;
+            Destroy(gameObject, 0.1f);
         }
 
         else
