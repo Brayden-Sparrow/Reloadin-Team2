@@ -6,10 +6,10 @@ public class PlayerProjectile : MonoBehaviour
 {
     // Variables
 
-    private float shotSpeed = 10f;
     private float maxLifeTime = 4f;
     private float chainNumber = 1f;
-    private Vector3 currentPosition;
+    private GameObject[] doomedEnemy;
+
 
     // References
 
@@ -20,11 +20,6 @@ public class PlayerProjectile : MonoBehaviour
         Destroy(gameObject, maxLifeTime);
     }
 
-
-    void Update()
-    {
-        
-    }
 
     private void LockChain()
     {
@@ -37,16 +32,12 @@ public class PlayerProjectile : MonoBehaviour
         if (other.tag == "Enemy")
         {
             LockChain();
+            //doomedEnemy[i] = other.gameObject;
         }
 
         else
         {
             return;
         }
-    }
-
-    private void BulletMove()
-    {
-
     }
 }
