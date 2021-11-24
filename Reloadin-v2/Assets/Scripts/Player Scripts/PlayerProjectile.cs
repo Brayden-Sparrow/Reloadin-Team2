@@ -7,7 +7,7 @@ public class PlayerProjectile : MonoBehaviour
     // Variables
 
     private float maxLifeTime = 4f;
-    private float chainNumber = 1f;
+    //private float chainNumber = 1f;
     private GameObject[] doomedEnemy;
 
 
@@ -27,7 +27,7 @@ public class PlayerProjectile : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnColliderEnter(Collider other)
     {
         if (other.tag == "Enemy")
         {

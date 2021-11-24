@@ -23,4 +23,11 @@ public class KeyController : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+     
+        gameObject.SetActive(false);
+       
+    }
 }

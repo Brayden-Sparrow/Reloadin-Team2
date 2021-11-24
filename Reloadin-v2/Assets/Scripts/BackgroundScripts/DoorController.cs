@@ -7,46 +7,40 @@ public class DoorController : MonoBehaviour
     // Variables
 
     public float dampTime = 0.2f;
-    private bool doorAccess1;
-    private bool doorAccess2;
-    private Vector3 moveVelocity;
-    private Vector3 desiredPosition;
 
     // References
 
-    private GameObject door1;
-    private GameObject door2;
-    private Transform doorOne;
-    private Transform doorTwo;
-    private GameObject door1Rise;
-    private GameObject door2Rise;
+    public GameObject door1;
+    public GameObject door2;
+    public GameObject key1;
+    public GameObject key2;
 
     // Functions
 
     void Start()
     {
-        doorAccess1 = false;
-        doorAccess2 = false;
+        key1.SetActive(true);
+        key2.SetActive(true);
+        door1.SetActive(true);
+        door2.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckKeyStatus();
+        CheckKeyStatus(); 
     }
 
     private void CheckKeyStatus()
     {
-        if (doorAccess1 == true)
+        if (key1.activeInHierarchy == false)
         {
-            desiredPosition = doorOne.position + door1Rise.transform.position;
-            transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref moveVelocity, dampTime);
+            door1.SetActive(false);
         }
 
-        if (doorAccess2 == true)
+        if (key2.activeInHierarchy == false)
         {
-            desiredPosition = doorTwo.position + door2Rise.transform.position;
-            transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref moveVelocity, dampTime);
+            door2.SetActive(false);
         }
     }
 }

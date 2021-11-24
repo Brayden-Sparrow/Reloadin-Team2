@@ -19,7 +19,7 @@ public class PlayerShooting : MonoBehaviour
     private ParticleSystem Chain;
     public Rigidbody Projectile;
     public GameObject firePoint;
-    private Ray chainDirection;
+    //private Ray chainDirection;
 
     // Functions
 
