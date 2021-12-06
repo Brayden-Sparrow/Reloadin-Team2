@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class End_intro_video : MonoBehaviour
 {
@@ -22,6 +22,6 @@ public class End_intro_video : MonoBehaviour
 
     void EndReached(UnityEngine.Video.VideoPlayer vp) 
     {
-        EditorSceneManager.LoadScene("Oscar");
+        SceneManager.LoadScene("Oscar");
     }
 }
