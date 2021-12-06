@@ -27,7 +27,7 @@ public class PlayerProjectile : MonoBehaviour
 
     }
 
-    private void OnColliderEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy")
         {

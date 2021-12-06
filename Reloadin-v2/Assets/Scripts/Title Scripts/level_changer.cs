@@ -20,6 +20,6 @@ public class level_changer : MonoBehaviour
 
     public void level1()
     {
-        EditorSceneManager.LoadScene("Intro");
+        EditorSceneManager.LoadScene("Oscar");
     }
 }
