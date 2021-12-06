@@ -264,8 +264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchForce: 10
-  Projectile: {fileID: 6835013527227687507, guid: 12098783e0d05d14a8f7dbac77083134, type: 3}
+  Projectile: {fileID: -2843216007088792648, guid: 12098783e0d05d14a8f7dbac77083134, type: 3}
   firePoint: {fileID: 2217979810243726561}
+  ammoReadOut: {fileID: 0}
 --- !u!1001 &6930589762749968671
 PrefabInstance:
   m_ObjectHideFlags: 0

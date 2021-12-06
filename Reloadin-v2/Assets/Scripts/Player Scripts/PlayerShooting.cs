@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerShooting : MonoBehaviour
 
@@ -19,6 +20,7 @@ public class PlayerShooting : MonoBehaviour
     private ParticleSystem Chain;
     public Rigidbody Projectile;
     public GameObject firePoint;
+    public Text ammoReadOut;
     //private Ray chainDirection;
 
     // Functions
@@ -50,6 +52,7 @@ public class PlayerShooting : MonoBehaviour
                     Reloading = true;
                 }
             }
+        ammoReadOut.text = "Ammo : " + currentAmmo;
         }
 
     // Create an instance of the projectile at same position and rotation as the firing point.
