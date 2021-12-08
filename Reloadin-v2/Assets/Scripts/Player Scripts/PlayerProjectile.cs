@@ -38,11 +38,6 @@ public class PlayerProjectile : MonoBehaviour
             Destroy(gameObject, impactLifeTime);
         }
 
-        if (other.tag == "Default")
-        {
-            Destroy(gameObject, impactLifeTime);
-        }
-
         else
         {
             return;
