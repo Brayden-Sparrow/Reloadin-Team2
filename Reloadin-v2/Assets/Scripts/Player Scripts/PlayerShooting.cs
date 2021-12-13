@@ -11,9 +11,9 @@ public class PlayerShooting : MonoBehaviour
 
     private float magSize = 6f;
     private float currentAmmo;
-    private bool Reloading;
+    public bool Reloading;
     private float reloadDelay;
-    public float launchForce = 10f;
+    public float launchForce = 1f; // Changing this value seemingly does nothing, I have no idea why
 
     // References
 

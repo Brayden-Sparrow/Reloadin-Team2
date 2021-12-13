@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1372741184586013775}
   - component: {fileID: 322929355582532011}
   - component: {fileID: 3812105955589614720}
+  - component: {fileID: -6306648602778733741}
   m_Layer: 0
   m_Name: Real Bullet
   m_TagString: Untagged
@@ -41,7 +42,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666349554987466064}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
@@ -62,6 +63,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6306648602778733741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666349554987466064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293fd82f32d00ca408a00b8ba7a2d176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5587143880519262958
 PrefabInstance:
   m_ObjectHideFlags: 0

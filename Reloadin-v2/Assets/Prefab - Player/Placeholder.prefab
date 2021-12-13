@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872676161939032274}
-  m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2627962777414533425}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &3796432302859553807
 Light:
   m_ObjectHideFlags: 0
@@ -42,11 +42,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.49831387, g: 0.50980395, b: 0.18431371, a: 1}
+  m_Color: {r: 0.8275733, g: 0.9339623, b: 0.48900855, a: 1}
   m_Intensity: 5
-  m_Range: 10
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 9
+  m_Range: 20
+  m_SpotAngle: 100
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -85,7 +85,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 3763154631451327480}
   m_Layer: 7
   m_Name: Placeholder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,8 +224,8 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_SlopeLimit: 55
+  m_StepOffset: 0.5
   m_SkinWidth: 0.05
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -263,8 +263,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534263bcfc63cf1429c6a3d1b614e331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reloading: 0
   launchForce: 10
-  Projectile: {fileID: -2843216007088792648, guid: 12098783e0d05d14a8f7dbac77083134, type: 3}
+  Projectile: {fileID: 3812105955589614720, guid: 71ad349885ca2be48a03aea3a575696e, type: 3}
   firePoint: {fileID: 2217979810243726561}
   ammoReadOut: {fileID: 0}
 --- !u!1001 &6930589762749968671
@@ -288,7 +289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7796144792028149310, guid: 6e2a2edde720f134baf85b45ffeac986, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7796144792028149310, guid: 6e2a2edde720f134baf85b45ffeac986, type: 3}
       propertyPath: m_LocalRotation.w

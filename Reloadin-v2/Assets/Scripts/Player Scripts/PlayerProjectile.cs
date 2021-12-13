@@ -7,12 +7,11 @@ public class PlayerProjectile : MonoBehaviour
     // Variables
 
     private float maxLifeTime = 4f;
-    private float impactLifeTime = 1f;
-    //private float chainNumber = 1f;
     private GameObject[] doomedEnemy;
 
-
     // References
+
+    private DoomedEnemy dEnemy;
 
     // Functions
 
@@ -28,19 +27,19 @@ public class PlayerProjectile : MonoBehaviour
 
     }
 
-    private void OnColliderEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.tag == "Enemy")
-        {
-            LockChain();
-            Debug.Log(other.gameObject);
-            //doomedEnemy[i] = other.gameObject;
-            Destroy(gameObject, impactLifeTime);
-        }
+        
+            if (other.gameObject.tag == "Enemy")
+            {
+                dEnemy = other.gameObject.GetComponent<DoomedEnemy>();
+                dEnemy.doomedStatus++;
+                Debug.Log(other.gameObject.transform.position);
+            }       
 
-        else
-        {
-            return;
-        }
+            else if (other.gameObject.tag != "Player")
+            {
+                Destroy(gameObject);
+            }
     }
 }
