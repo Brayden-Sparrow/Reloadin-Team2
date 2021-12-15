@@ -8,14 +8,14 @@ public class EnemyHealth : MonoBehaviour
 {
     // Variables
 
-    private float maxHealth;
+    private float maxHealth = 1f;
     public float currentHealth;
 
 
     // References
 
-    public Transform healthBarRed; // Actual Health
-    public Transform healthBarWhite; // Health Bar Background
+    public GameObject healthBarRed; // Actual Health
+    public GameObject healthBarWhite; // Health Bar Background
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +31,8 @@ public class EnemyHealth : MonoBehaviour
 
     private void checkHealth()
     {
-        //healthBarRed.transform.localScale.x(Vector3 maxHealth, maxHealth/currentHealth * healthBarWhite.transform.localScale.x);
+        // This is your problem Brayden, sorry.
+        float healthRatio = currentHealth / maxHealth;
+
     }
 }
