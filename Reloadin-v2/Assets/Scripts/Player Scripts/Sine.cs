@@ -52,9 +52,9 @@ public class Sine : MonoBehaviour
     private float starting_z_rotation;
 
     private Renderer renderer;
-    
 
 
+    private Transform player;
     
     // Interal variables
 
@@ -68,20 +68,25 @@ public class Sine : MonoBehaviour
         starting_height = transform.localScale.y;
         starting_depth = transform.localScale.z;
 
-        starting_x_rotation = transform.localRotation.x;
-        starting_y_rotation = transform.localRotation.y;
-        starting_z_rotation = transform.localRotation.z;
+        starting_x_rotation = transform.eulerAngles.x;
+        starting_y_rotation = transform.eulerAngles.y;
+        starting_z_rotation = transform.eulerAngles.z;
+
+        player = transform.parent;
+        Debug.Log(player.gameObject.name);
+
         
 
         renderer = gameObject.GetComponent<Renderer>();
-        Debug.Log("start");
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
-
+        //Debug.Log("Local:" + starting_y_rotation + "\nParent: " + player.eulerAngles.y);
+        starting_y_rotation = player.eulerAngles.y;
 
         if (is_enabled)
         {
