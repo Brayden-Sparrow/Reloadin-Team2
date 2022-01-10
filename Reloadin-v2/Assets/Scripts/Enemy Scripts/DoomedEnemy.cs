@@ -16,6 +16,7 @@ public class DoomedEnemy : MonoBehaviour
     public GameObject effectImage;
     public Text effectAmount;
     private EnemyHealth eHealth;
+    private LineRendererTargeting lrTargeting;
 
     // Functions
     
