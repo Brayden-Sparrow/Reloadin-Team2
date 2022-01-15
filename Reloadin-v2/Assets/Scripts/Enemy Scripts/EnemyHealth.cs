@@ -35,4 +35,13 @@ public class EnemyHealth : MonoBehaviour
         float healthRatio = currentHealth / maxHealth;
 
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Real Bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
