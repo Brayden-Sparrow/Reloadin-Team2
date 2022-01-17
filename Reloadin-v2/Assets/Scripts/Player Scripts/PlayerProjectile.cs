@@ -7,11 +7,11 @@ public class PlayerProjectile : MonoBehaviour
     // Variables
 
     private float maxLifeTime = 4f;
-    private GameObject[] doomedEnemy;
+    private GameObject[] EnemyHealth;
 
     // References
 
-    private DoomedEnemy dEnemy;
+    private EnemyHealth dEnemy;
 
     // Functions
 
@@ -30,10 +30,9 @@ public class PlayerProjectile : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         
-            if (other.gameObject.tag == "Enemy")
+            if (other.gameObject.tag == "Enemy_3")
             {
-                dEnemy = other.gameObject.GetComponent<DoomedEnemy>();
-                dEnemy.doomedStatus++;
+                dEnemy = other.gameObject.GetComponent<EnemyHealth>();
                 Debug.Log(other.gameObject.transform.position);
             }       
 

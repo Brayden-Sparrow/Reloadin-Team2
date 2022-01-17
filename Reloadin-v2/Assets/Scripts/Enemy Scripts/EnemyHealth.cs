@@ -8,40 +8,40 @@ public class EnemyHealth : MonoBehaviour
 {
     // Variables
 
-    private float maxHealth = 1f;
-    public float currentHealth;
+    public int MaxHealth;
+    public int CurrentHealth;
 
 
-    // References
-
-    public GameObject healthBarRed; // Actual Health
-    public GameObject healthBarWhite; // Health Bar Background
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        CurrentHealth = MaxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        checkHealth();
-    }
-
-    private void checkHealth()
-    {
-        // This is your problem Brayden, sorry.
-        float healthRatio = currentHealth / maxHealth;
-
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Real Bullet")
+        if (CurrentHealth <= 0)
         {
             Destroy(gameObject);
         }
     }
 
+    public void HurtEnemy(int damageToGive)
+    {
+        CurrentHealth -= damageToGive;
+    }
+
+    public void SetMaxHealth()
+    {
+        CurrentHealth = MaxHealth;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "Real Bullet(Clone)")
+        {
+            CurrentHealth -= 5;
+        }
+    }
+    
 }

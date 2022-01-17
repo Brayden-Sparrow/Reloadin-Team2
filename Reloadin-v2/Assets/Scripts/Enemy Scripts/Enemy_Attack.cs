@@ -38,7 +38,7 @@ public class Enemy_Attack : MonoBehaviour
             transform.LookAt(new Vector3(Player_x, 1.33f, Player_z));
             transform.position += transform.forward * Time.deltaTime * speed;
 
-            Debug.Log(transform.forward * Time.deltaTime * speed);
+            //Debug.Log(transform.forward * Time.deltaTime * speed);
         }
 
     }
@@ -52,4 +52,5 @@ public class Enemy_Attack : MonoBehaviour
         return my_Distance;
     } 
     
+
 }

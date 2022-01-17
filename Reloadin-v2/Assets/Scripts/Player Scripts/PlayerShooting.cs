@@ -89,4 +89,16 @@ public class PlayerShooting : MonoBehaviour
             }
         }
     }
+
+    public int damageToGive;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy_3")
+        {
+            //destroy(other.gameObject
+            other.gameObject.GetComponent<EnemyHealth>().HurtEnemy(damageToGive);
+        }
+    }
+
 }
